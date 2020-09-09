@@ -15,7 +15,7 @@ public class Aciklama
 
     public void Yaz()
     {
-        Ben kisi = Bilgi();
+        var kisi = Bilgi();
 
         Console.Write($"Ad = {kisi.Tur}"); // Diğer iki ayaklı cisimlerin aksine
         Console.WriteLine($"Favori Programlama Dili = {kisi.FavoriDil}");
