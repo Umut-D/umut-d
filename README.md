@@ -17,7 +17,7 @@ public class Aciklama
     {
         var kisi = Bilgi();
 
-        Console.Write($"Ad = {kisi.Tur}"); // Diğer iki ayaklı cisimlerin aksine
+        Console.WriteLine($"Ad = {kisi.Tur}"); // Diğer iki ayaklı cisimlerin aksine
         Console.WriteLine($"Favori Programlama Dili = {kisi.FavoriDil}");
         Console.WriteLine($"Ünvan = {kisi.Unvan}");
     }
