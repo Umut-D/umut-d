@@ -6,7 +6,7 @@ public class Ben
         public string Unvan { get; set; }
     }
 
-    public class Bilgiler
+    public class Aciklama
     {
         private Ben Bilgi()
         {
