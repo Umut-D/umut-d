@@ -1,7 +1,7 @@
 ```csharp
 public class Ben
 {
-    public string Ad { get; set; }
+    public string Tur { get; set; }
     public string FavoriDil { get; set; }
     public string Unvan { get; set; }
 }
@@ -10,14 +10,14 @@ public class Aciklama
 {
     private Ben Bilgi()
     {
-        return new Ben {Ad = "Umut D.", FavoriDil = "C#", Unvan = "Lüzumsuz İşler Müdürü"};
+        return new Ben {Tur = "İnsan", FavoriDil = "C#", Unvan = "Lüzumsuz İşler Müdürü"};
     }
 
     public void Yaz()
     {
         Ben kisi = Bilgi();
 
-        Console.Write($"Ad = {kisi.Ad}");
+        Console.Write($"Ad = {kisi.Tur}"); // Diğer iki ayaklı cisimlerin aksine
         Console.WriteLine($"Favori Programlama Dili = {kisi.FavoriDil}");
         Console.WriteLine($"Ünvan = {kisi.Unvan}");
     }
