@@ -1,16 +1,16 @@
-### Hi there 👋
+### Bana dair falan filan ⚡
 
 <!--
-**Umut-D/umut-d** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+```csharp
+class Ben
+{
+}
+```
 -->
+
+### Diller ler er r
+
+![Github Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=umut-d&layout=compact&hide=html)
+### Vaziyetler
+
+![Github Stats](https://readmestats.vercel.app/api?username=umut-d&show_icons=true&title_color=333&icon_color=d43111&count_private=true&include_all_commits=true)
