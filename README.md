@@ -10,6 +10,7 @@ public class Aciklama
 {
     private Ben Bilgi()
     {
+        // Diğer iki ayaklı cisimlerin aksine 'İnsan' olduğumu belirtme gereği duydum
         return new Ben {Tur = "İnsan", FavoriDil = "C#", Unvan = "Lüzumsuz İşler Müdürü"};
     }
 
@@ -17,7 +18,7 @@ public class Aciklama
     {
         var kisi = Bilgi();
 
-        Console.WriteLine($"Ad = {kisi.Tur}"); // Diğer iki ayaklı cisimlerin aksine
+        Console.WriteLine($"Ad = {kisi.Tur}");
         Console.WriteLine($"Favori Programlama Dili = {kisi.FavoriDil}");
         Console.WriteLine($"Ünvan = {kisi.Unvan}");
     }
