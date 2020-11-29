@@ -16,7 +16,7 @@ public class Aciklama
         return new Ben
             {
                 Ad = "Umut D.",
-                Tur = "İnsan", // Diğer iki ayaklı cisimlerin aksine 'İnsan' olduğumu belirtme gereği duydum
+                Tur = "İnsan", // Diğer iki ayaklıların aksine 'İnsan' olduğumu belirtme gereği duydum
                 FavoriDil = "C#",
                 Takim = "Arsenal",
                 Unvan = "Lüzumsuz İşler Müdürü"
