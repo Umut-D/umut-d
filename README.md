@@ -12,7 +12,6 @@ public class Aciklama
 {
     private Ben Bilgi()
     {
-        
         return new Ben
             {
                 Ad = "Umut D.",
