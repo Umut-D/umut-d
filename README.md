@@ -12,11 +12,11 @@ public class Aciklama
 {
     private Ben Bilgi()
     {
-        // Diğer iki ayaklı cisimlerin aksine 'İnsan' olduğumu belirtme gereği duydum
+        
         return new Ben
             {
                 Ad = "Umut D.",
-                Tur = "İnsan",
+                Tur = "İnsan", // Diğer iki ayaklı cisimlerin aksine 'İnsan' olduğumu belirtme gereği duydum
                 FavoriDil = "C#",
                 Takim = "Arsenal",
                 Unvan = "Lüzumsuz İşler Müdürü"
