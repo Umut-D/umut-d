@@ -1,6 +1,7 @@
 ```csharp
 public class Ben
 {
+    public string Ad { get; set; }
     public string Tur { get; set; }
     public string FavoriDil { get; set; }
     public string Takim { get; set; }
@@ -12,17 +13,28 @@ public class Aciklama
     private Ben Bilgi()
     {
         // Diğer iki ayaklı cisimlerin aksine 'İnsan' olduğumu belirtme gereği duydum
-        return new Ben { Tur = "İnsan", FavoriDil = "C#", Takim = "Arsenal", Unvan = "Lüzumsuz İşler Müdürü" };
+        return new Ben
+            {
+                Ad = "Umut D.",
+                Tur = "İnsan",
+                FavoriDil = "C#",
+                Takim = "Arsenal",
+                Unvan = "Lüzumsuz İşler Müdürü"
+            };
     }
 
     public void Yaz()
     {
-        var kisi = Bilgi();
+        Ben kisi = Bilgi();
 
-        Console.WriteLine($"Ad = {kisi.Tur}");
-        Console.WriteLine($"Favori Programlama Dili = {kisi.FavoriDil}");
-        Console.WriteLine($"Tuttuğu Takım = {kisi.Takim}");
-        Console.WriteLine($"Ünvan = {kisi.Unvan}");
+        StringBuilder banaDair = new StringBuilder();
+        banaDair.AppendLine($"Ad = {kisi.Ad}");
+        banaDair.AppendLine($"Tür = {kisi.Tur}");
+        banaDair.AppendLine($"Favori Programlama Dili = {kisi.FavoriDil}");
+        banaDair.AppendLine($"Tuttuğu Takım = {kisi.Takim}");
+        banaDair.AppendLine($"Ünvan = {kisi.Unvan}");
+
+        return banaDair;
     }
 }
 ```
