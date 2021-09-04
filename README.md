@@ -1,41 +1,51 @@
 ```csharp
 public class Ben
-{
-    public string Ad { get; set; }
-    public string Tur { get; set; }
-    public string FavoriDil { get; set; }
-    public string Takim { get; set; }
-    public string Unvan { get; set; }
-}
-
-public class Aciklama
-{
-    private Ben Bilgi()
     {
-        return new Ben
+        public string Ad { get; set; }
+        public string Tur => "İnsan"; // Diğer iki ayaklıların aksine 'İnsan' olduğumu belirtme gereği duydum
+        public string FavoriProgramlamaDili { get; set; }
+        public string Unvan { get; set; }
+    }
+
+    public class Kunye
+    {
+        private readonly Ben _ben;
+
+        public Kunye(Ben ben)
+        {
+            _ben = ben;
+        }
+
+        public void Yaz()
+        {
+            StringBuilder banaDair = new StringBuilder();
+            banaDair.AppendLine($"Ad = {_ben.Ad}")
+                .AppendLine($"Tür = {_ben.Tur}")
+                .AppendLine($"Favori Programlama Dili = {_ben.FavoriProgramlamaDili}")
+                .AppendLine($"Ünvan = {_ben.Unvan}");
+
+            Console.WriteLine(banaDair);
+        }
+    }
+
+
+    public class Program
+    {
+        private static void Main()
+        {
+            Ben umutd = new Ben
             {
                 Ad = "Umut D.",
-                Tur = "İnsan", // Diğer iki ayaklıların aksine 'İnsan' olduğumu belirtme gereği duydum
-                FavoriDil = "C#",
-                Takim = "Arsenal",
+                FavoriProgramlamaDili = "C#",
                 Unvan = "Lüzumsuz İşler Müdürü"
             };
+
+            Kunye kunye = new Kunye(umutd);
+            kunye.Yaz();
+
+            Console.Read();
+        }
     }
-
-    public void Yaz()
-    {
-        Ben kisi = Bilgi();
-
-        StringBuilder banaDair = new StringBuilder();
-        banaDair.AppendLine($"Ad = {kisi.Ad}");
-        banaDair.AppendLine($"Tür = {kisi.Tur}");
-        banaDair.AppendLine($"Favori Programlama Dili = {kisi.FavoriDil}");
-        banaDair.AppendLine($"Tuttuğu Takım = {kisi.Takim}");
-        banaDair.AppendLine($"Ünvan = {kisi.Unvan}");
-
-        return banaDair;
-    }
-}
 ```
 
 ![Github Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=umut-d&layout=compact&hide=html)
