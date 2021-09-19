@@ -20,9 +20,9 @@ public class Kunye
     {
         StringBuilder banaDair = new StringBuilder();
         banaDair.AppendLine($"Ad = {_ben.Ad}")
-            .AppendLine($"Tür = {_ben.Tur}")
-            .AppendLine($"Favori Programlama Dili = {_ben.FavoriProgramlamaDili}")
-            .AppendLine($"Ünvan = {_ben.Unvan}");
+                .AppendLine($"Tür = {_ben.Tur}")
+                .AppendLine($"Favori Programlama Dili = {_ben.FavoriProgramlamaDili}")
+                .AppendLine($"Ünvan = {_ben.Unvan}");
 
         Console.WriteLine(banaDair);
     }
