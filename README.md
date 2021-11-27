@@ -16,15 +16,16 @@ public class Kunye
         _ben = ben;
     }
 
-public void Yazdir()
-{
-    StringBuilder bilgiler = new StringBuilder()
-    .AppendLine($"Ad = {_ben.Ad}")
-    .AppendLine($"Tür = {_ben.Tur}")
-    .AppendLine($"Ünvan = {_ben.Unvan}")
-    .AppendLine($"Favori Programlama Dili = {_ben.FavoriProgramlamaDili}");
+    public void Yazdir()
+    {
+        StringBuilder bilgiler = new StringBuilder()
+        .AppendLine($"Ad = {_ben.Ad}")
+        .AppendLine($"Tür = {_ben.Tur}")
+        .AppendLine($"Ünvan = {_ben.Unvan}")
+        .AppendLine($"Favori Programlama Dili = {_ben.FavoriProgramlamaDili}");
             
-    Console.WriteLine(bilgiler);
+        Console.WriteLine(bilgiler);
+    }
 }
 
 public class Program
