@@ -3,8 +3,8 @@ public class Ben
 {
     public string Ad { get; set; }
     public string Tur => "İnsan"; // Diğer iki ayaklıların aksine 'İnsan' olduğumu belirtme gereği duydum
-    public string FavoriProgramlamaDili { get; set; }
     public string Unvan { get; set; }
+    public string FavoriProgramlamaDili { get; set; }
 }
 
 public class Kunye
@@ -16,18 +16,16 @@ public class Kunye
         _ben = ben;
     }
 
-    public void Yaz()
-    {
-        StringBuilder banaDair = new StringBuilder();
-        banaDair.AppendLine($"Ad = {_ben.Ad}")
-                .AppendLine($"Tür = {_ben.Tur}")
-                .AppendLine($"Favori Programlama Dili = {_ben.FavoriProgramlamaDili}")
-                .AppendLine($"Ünvan = {_ben.Unvan}");
-
-        Console.WriteLine(banaDair);
-    }
+public void Yazdir()
+{
+    StringBuilder bilgiler = new StringBuilder()
+    .AppendLine($"Ad = {_ben.Ad}")
+    .AppendLine($"Tür = {_ben.Tur}")
+    .AppendLine($"Ünvan = {_ben.Unvan}")
+    .AppendLine($"Favori Programlama Dili = {_ben.FavoriProgramlamaDili}");
+            
+    Console.WriteLine(bilgiler);
 }
-
 
 public class Program
 {
@@ -41,7 +39,7 @@ public class Program
         };
 
         Kunye kunye = new Kunye(umutd);
-        kunye.Yaz();
+        kunye.Yazdir();
 
         Console.Read();
     }
