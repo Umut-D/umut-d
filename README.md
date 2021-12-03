@@ -9,20 +9,20 @@ public class Ben
 
 public class Kunye
 {
-    private readonly Ben _ben;
+    private readonly Ben _umutd;
 
-    public Kunye(Ben ben)
+    public Kunye(Ben umutd)
     {
-        _ben = ben;
+        _umutd = umutd;
     }
 
     public void Yazdir()
     {
         StringBuilder bilgiler = new StringBuilder()
-        .AppendLine($"Ad = {_ben.Ad}")
-        .AppendLine($"Tür = {_ben.Tur}")
-        .AppendLine($"Ünvan = {_ben.Unvan}")
-        .AppendLine($"Favori Programlama Dili = {_ben.FavoriProgramlamaDili}");
+        .AppendLine($"Ad = _umutd}")
+        .AppendLine($"Tür = {_umutd.Tur}")
+        .AppendLine($"Ünvan = {_umutd.Unvan}")
+        .AppendLine($"Favori Programlama Dili = {_umutd.FavoriProgramlamaDili}");
             
         Console.WriteLine(bilgiler);
     }
