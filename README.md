@@ -1,42 +1,40 @@
 ```csharp
-public class Ben
-{
-    public string Ad { get; set; }
-    public string Tur => "İnsan"; // Diğer iki ayaklıların aksine 'İnsan' olduğumu belirtme gereği duydum
-    public string Unvan { get; set; }
-    public string FavoriProgramlamaDili { get; set; }
-}
-
-public class Kunye
-{
-    public static void Yazdir(Ben umutd)
+    public class Ben
     {
-        StringBuilder bilgiler = new StringBuilder()
-        .AppendLine($"Ad = {umutd.Ad}")
-        .AppendLine($"Tür = {umutd.Tur}")
-        .AppendLine($"Ünvan = {umutd.Unvan}")
-        .AppendLine($"Favori Programlama Dili = {umutd.FavoriProgramlamaDili}");
-
-        Console.WriteLine(bilgiler);
+        public string Ad { get; set; }
+        public string Tur => "İnsan"; // Diğer iki ayaklıların aksine 'İnsan' olduğumu belirtme gereği duydum
+        public string Unvan { get; set; }
+        public string FavoriProgramlamaDili { get; set; }
     }
-}
 
-public class Program
-{
-    private static void Main()
+    public class Kunye
     {
-        Ben umutd = new Ben
+        public static void Yazdir(Ben umutd)
         {
-            Ad = "Umut D.",
-            FavoriProgramlamaDili = "C#",
-            Unvan = "Lüzumsuz İşler Müdürü"
-        };
-        
-        Kunye.Yazdir(umutd);
+            StringBuilder bilgiler = new StringBuilder()
+                .AppendLine($"Ad = {umutd.Ad}")
+                .AppendLine($"Tür = {umutd.Tur}")
+                .AppendLine($"Ünvan = {umutd.Unvan}")
+                .AppendLine($"Favori Programlama Dili = {umutd.FavoriProgramlamaDili}");
 
-        Console.Read();
+            Console.WriteLine(bilgiler);
+        }
     }
-}
+
+    public class Program
+    {
+        private static void Main()
+        {
+            Ben umutd = new Ben
+            {
+                Ad = "Umut D.",
+                Unvan = "Lüzumsuz İşler Müdürü",
+                FavoriProgramlamaDili = "C#"
+            };
+
+            Kunye.Yazdir(umutd);
+        }
+    }
 ```
 
 ![Github Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=umut-d&layout=compact&hide=html)
