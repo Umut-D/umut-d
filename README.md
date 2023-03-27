@@ -11,13 +11,16 @@ public class Kunye
 {
     public static void Yazdir(Ben umutd)
     {
-        StringBuilder bilgiler = new StringBuilder()
+        Console.WriteLine(Bilgiler(umutd));
+    }
+
+    private static StringBuilder Bilgiler(Ben umutd)
+    {
+        return new StringBuilder()
             .AppendLine($"Ad = {umutd.Ad}")
             .AppendLine($"Tür = {umutd.Tur}")
             .AppendLine($"Ünvan = {umutd.Unvan}")
             .AppendLine($"Favori Programlama Dili = {umutd.FavoriProgramlamaDili}");
-
-        Console.WriteLine(bilgiler);
     }
 }
 
