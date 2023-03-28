@@ -9,18 +9,25 @@ public class Ben
 
 public class Kunye
 {
-    public static void Yazdir(Ben umutd)
+    private readonly Ben _umutd;
+
+    public Kunye(Ben umutd)
     {
-        Console.WriteLine(Bilgiler(umutd));
+        _umutd = umutd;
     }
 
-    private static StringBuilder Bilgiler(Ben umutd)
+    public void Yazdir()
+    {
+        Console.WriteLine(Bilgiler());
+    }
+
+    private StringBuilder Bilgiler()
     {
         return new StringBuilder()
-            .AppendLine($"Ad = {umutd.Ad}")
-            .AppendLine($"Tür = {umutd.Tur}")
-            .AppendLine($"Ünvan = {umutd.Unvan}")
-            .AppendLine($"Favori Programlama Dili = {umutd.FavoriProgramlamaDili}");
+            .AppendLine($"Ad = {_umutd.Ad}")
+            .AppendLine($"Tür = {_umutd.Tur}")
+            .AppendLine($"Ünvan = {_umutd.Unvan}")
+            .AppendLine($"Favori Programlama Dili = {_umutd.FavoriProgramlamaDili}");
     }
 }
 
@@ -28,14 +35,13 @@ public class Program
 {
     private static void Main()
     {
-        Ben umutd = new Ben
+        Kunye kunye = new Kunye(new Ben
         {
             Ad = "Umut D.",
             Unvan = "Lüzumsuz İşler Müdürü",
             FavoriProgramlamaDili = "C#"
-        };
-
-        Kunye.Yazdir(umutd);
+        });
+        kunye.Yazdir();
     }
 }
 ```
