@@ -1,49 +1,43 @@
 ```csharp
-public class Ben
-{
-    public string Ad { get; set; }
-    public string Tur => "İnsan"; // Diğer iki ayaklıların aksine 'İnsan' olduğumu belirtme gereği duydum
-    public string Unvan { get; set; }
-    public string FavoriProgramlamaDili { get; set; }
-}
-
-public class Kunye
-{
-    private readonly Ben _umutd;
-
-    public Kunye(Ben umutd)
+    public class Ben
     {
-        _umutd = umutd;
+        public string Ad { get; set; }
+        public string Tur => "İnsan"; // Diğer iki ayaklıların aksine 'İnsan' olduğumu belirtme gereği duydum
+        public string Unvan { get; set; }
+        public string FavoriProgramlamaDili { get; set; }
     }
 
-    public void Yazdir()
+    public class Kunye
     {
-        Console.WriteLine(Bilgiler());
-    }
+        private readonly Ben _umutD;
 
-    private StringBuilder Bilgiler()
-    {
-        return new StringBuilder()
-            .AppendLine($"Ad = {_umutd.Ad}")
-            .AppendLine($"Tür = {_umutd.Tur}")
-            .AppendLine($"Ünvan = {_umutd.Unvan}")
-            .AppendLine($"Favori Programlama Dili = {_umutd.FavoriProgramlamaDili}");
-    }
-}
+        public string Bilgiler => $"Ad = {_umutD.Ad} \n"
+                                  + $"Tür = {_umutD.Tur} \n"
+                                  + $"Ünvan = {_umutD.Unvan} \n"
+                                  + $"Favori Programlama Dili = {_umutD.FavoriProgramlamaDili}";
 
-public class Program
-{
-    private static void Main()
-    {
-        Kunye kunye = new Kunye(new Ben
+        public Kunye(Ben umutD)
         {
-            Ad = "Umut D.",
-            Unvan = "Lüzumsuz İşler Müdürü",
-            FavoriProgramlamaDili = "C#"
-        });
-        kunye.Yazdir();
+            _umutD = umutD;
+        }
     }
-}
+
+    public class Program
+    {
+        private void Main()
+        {
+            Kunye kunye = new Kunye(new Ben
+            {
+                Ad = "Umut D.",
+                Unvan = "Lüzumsuz İşler Müdürü",
+                FavoriProgramlamaDili = "C#"
+            });
+
+            Console.WriteLine(kunye.Bilgiler);
+
+            Console.Read();
+        }
+    }
 ```
 
 ![Github Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=umut-d&layout=compact&hide=html)
